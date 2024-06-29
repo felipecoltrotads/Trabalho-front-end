@@ -2,12 +2,10 @@ import { Box, Text } from "@chakra-ui/react";
 
 const Header = ({ title }) => {
     return (
-        <Box bgColor="red.200" w="100%" padding={10} textAlign="center">
-            <Text color="black" fontSize="30px">
-                {title}
-            </Text>
+        <Box bg="teal.500" w="100%" p={4} color="white" textAlign="center" borderWidth="2px" borderRadius="lg" borderColor="teal.300">
+            <Text fontSize="2xl" fontWeight="bold">{title}</Text>
         </Box>
     );
-}
+};
 
 export default Header;

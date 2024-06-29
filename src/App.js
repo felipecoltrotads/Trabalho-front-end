@@ -3,6 +3,7 @@ import './App.css';
 import Login from './pages/Login';
 import { ChakraProvider } from "@chakra-ui/react";
 import Listagem from "./pages/Listagem";
+import Detalhes from "./pages/Detalhes";
 
 const router = createBrowserRouter([
   {
@@ -10,8 +11,12 @@ const router = createBrowserRouter([
     element: <Login />
   },
   {
-    path: "listagem",
+    path: "/listagem",
     element: <Listagem />
+  },
+  {
+    path: "/pokemon/:id",
+    element: <Detalhes />
   }
 ])
 

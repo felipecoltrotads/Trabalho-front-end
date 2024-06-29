@@ -3,6 +3,7 @@ import { Button, Flex, Input, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import Header from "../components/Header";
 import { useNavigate } from "react-router";
+import Background from "../components/background";
 
 const Login = () => {
 
@@ -31,19 +32,18 @@ const Login = () => {
     }
 
     return (
-
-        <div>
-            <body className="fundo">
-                <Header title="SUPER-HERÓIS" />
+        <Background color="gray.200">
+            <div>
+                <Header title="POKÉMON INFORMATION" />
                 <div className="login">LOGIN</div>
                 <Flex direction="column" gap={8} padding={2} justifyContent="center" alignItems="center">
-                    <Input placeholder="Digite o E-mail" value={emailInput} onChange={OnChangeEmailInput} width={400} />
-                    <Input placeholder="Digite a Senha" value={senhaInput} onChange={OnChangeSenhaInput} width={400} />
+                    <Input placeholder="Digite o E-mail" value={emailInput} onChange={OnChangeEmailInput} width={400} borderWidth="3px" borderRadius="lg" borderColor="teal.300" />
+                    <Input placeholder="Digite a Senha" value={senhaInput} onChange={OnChangeSenhaInput} width={400} borderWidth="3px" borderRadius="lg" borderColor="teal.300" />
                     {error && <Text fontSize="20px" color="red.600">{error}</Text>}
                     <Button colorScheme="blue" onClick={validationLogin} disabled={!emailInput || !senhaInput || senhaInput.length < 8}>Acessar</Button>
                 </Flex>
-            </body>
-        </div>
+            </div>
+        </Background>
     );
 }
 
